@@ -3923,10 +3923,10 @@ _:future,
   vertical-align: top;
 }
 #nav #toggle-menu:hover {
-  color: var(--white);
+  color: #ff0;
 }
 #nav a {
-  color: var(--light-grey);
+  color: #ff0;
 }
 #nav a:hover {
   color: var(--white);
