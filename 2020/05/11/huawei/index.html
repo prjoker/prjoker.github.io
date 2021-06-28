@@ -1,0 +1,484 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>华为交换机命令 | Prjoker</title><meta name="keywords" content="交换机命令"><meta name="author" content="不言仙声"><meta name="copyright" content="不言仙声"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="S3300交换机配置手册S5700交换机配置手册别的版本https:&#x2F;&#x2F;support.huawei.com&#x2F;hedex&#x2F;hdx.do?docid&#x3D;EDOC1000023648&amp;lang&#x3D;zh。。。。。。。。。。。。      交换机终端系统命令1.基本查询命令（在用户视图下使用） pwd    查看当前目录 dir    显示当前目录下的文件信息 more 查看文本文件的具体内容 2.基">
+<meta property="og:type" content="article">
+<meta property="og:title" content="华为交换机命令">
+<meta property="og:url" content="http://prjoker.github.io/2020/05/11/huawei/index.html">
+<meta property="og:site_name" content="Prjoker">
+<meta property="og:description" content="S3300交换机配置手册S5700交换机配置手册别的版本https:&#x2F;&#x2F;support.huawei.com&#x2F;hedex&#x2F;hdx.do?docid&#x3D;EDOC1000023648&amp;lang&#x3D;zh。。。。。。。。。。。。      交换机终端系统命令1.基本查询命令（在用户视图下使用） pwd    查看当前目录 dir    显示当前目录下的文件信息 more 查看文本文件的具体内容 2.基">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post01.jpg">
+<meta property="article:published_time" content="2020-05-11T04:01:57.000Z">
+<meta property="article:modified_time" content="2021-02-26T03:20:42.239Z">
+<meta property="article:author" content="不言仙声">
+<meta property="article:tag" content="交换机命令">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post01.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://prjoker.github.io/2020/05/11/huawei/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin="crossorigin"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//pingjs.qq.com"/><link rel="preconnect" href="//s4.cnzz.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1f47af37227e1d3689c710df7f5699d4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=180487064-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '180487064-1');
+</script><script>var _mtac = {};
+(function() {
+    var mta = document.createElement("script");
+    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "500731387");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+})();
+</script><script async="async" data-pjax="data-pjax" src="https://s4.cnzz.com/z_stat.php?id=1279345065&amp;web_id=1279345065"></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2021-02-26 11:20:42'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">18</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fa fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fa fa-image"></i><span> 图库</span></a></li><li><a class="site-page" href="/Book/"><i class="fa-fw fa fa-image"></i><span> 书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA%E7%BB%88%E7%AB%AF%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">交换机终端系统命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">查看配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%BD%93%E5%89%8D%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">显示交换机当前配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BAarp%E4%BF%A1%E6%81%AF"><span class="toc-number">3.2.</span> <span class="toc-text">显示arp信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BAmac-address"><span class="toc-number">3.3.</span> <span class="toc-text">显示mac-address</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E7%AB%AF%E5%8F%A3vlan"><span class="toc-number">3.4.</span> <span class="toc-text">显示端口vlan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E7%AB%AF%E5%8F%A3%E4%BF%A1%E6%81%AF"><span class="toc-number">3.5.</span> <span class="toc-text">显示端口信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E7%AB%AF%E5%8F%A3%E9%85%8D%E7%BD%AE"><span class="toc-number">3.6.</span> <span class="toc-text">显示端口配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BAip%E9%85%8D%E7%BD%AE"><span class="toc-number">3.7.</span> <span class="toc-text">显示ip配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BAvlan"><span class="toc-number">3.8.</span> <span class="toc-text">显示vlan</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E9%82%BB%E5%B1%85"><span class="toc-number">3.9.</span> <span class="toc-text">显示邻居</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E8%B7%AF%E7%94%B1%E8%A1%A8"><span class="toc-number">3.10.</span> <span class="toc-text">显示路由表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-number">3.11.</span> <span class="toc-text">显示版本信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BAirf%E6%8B%93%E6%89%91%E6%83%85%E5%86%B5"><span class="toc-number">3.12.</span> <span class="toc-text">显示irf拓扑情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vlan%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E6%8E%A5%E5%8F%A3%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%81%9A%E5%90%88%E7%BB%84"><span class="toc-number">4.</span> <span class="toc-text">Vlan、接口、接口类型和聚合组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Vlan%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">4.1.</span> <span class="toc-text">Vlan的创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">4.2.</span> <span class="toc-text">接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.3.</span> <span class="toc-text">接口类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Access"><span class="toc-number">4.3.1.</span> <span class="toc-text">Access</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Trunk"><span class="toc-number">4.3.2.</span> <span class="toc-text">Trunk</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hybrid"><span class="toc-number">4.3.3.</span> <span class="toc-text">Hybrid</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Eth-trunk%E8%81%9A%E5%90%88%E7%BB%84"><span class="toc-number">4.4.</span> <span class="toc-text">Eth-trunk聚合组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1"><span class="toc-number">5.</span> <span class="toc-text">路由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1"><span class="toc-number">5.1.</span> <span class="toc-text">静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="toc-number">5.2.</span> <span class="toc-text">动态路由</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RIP"><span class="toc-number">5.2.1.</span> <span class="toc-text">RIP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OSPF"><span class="toc-number">5.2.2.</span> <span class="toc-text">OSPF</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VRRP%E8%99%9A%E6%8B%9F%E7%BD%91%E5%85%B3"><span class="toc-number">6.</span> <span class="toc-text">VRRP虚拟网关</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A0%86%E5%8F%A0%EF%BC%88stack%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">堆叠（stack）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A6%E5%8F%B7%E7%99%BB%E5%BD%95"><span class="toc-number">8.</span> <span class="toc-text">账号登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89acl%E7%AD%96%E7%95%A5"><span class="toc-number">9.</span> <span class="toc-text">定义acl策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89acl"><span class="toc-number">9.1.</span> <span class="toc-text">定义acl</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E4%B8%8A%E7%AB%AF%E5%8F%A3%E5%8A%A0%E8%BD%BDACL"><span class="toc-number">9.2.</span> <span class="toc-text">防火墙上端口加载ACL</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E7%BA%BF%E8%AE%BE%E7%BD%AE"><span class="toc-number">10.</span> <span class="toc-text">无线设置</span></a></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/timg.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Prjoker</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fa fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fa fa-image"></i><span> 图库</span></a></li><li><a class="site-page" href="/Book/"><i class="fa-fw fa fa-image"></i><span> 书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">华为交换机命令</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-05-11T04:01:57.000Z" title="发表于 2020-05-11 12:01:57">2020-05-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-26T03:20:42.239Z" title="更新于 2021-02-26 11:20:42">2021-02-26</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><div class="tabs" id="test4"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test4-1">S3300交换机配置手册</button></li><li class="tab"><button type="button" data-href="#test4-2">S5700交换机配置手册</button></li><li class="tab"><button type="button" data-href="#test4-3">别的版本</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test4-1"><p><a target="_blank" rel="noopener" href="https://support.huawei.com/hedex/hdx.do?docid=EDOC1000023648&amp;lang=zh">https://support.huawei.com/hedex/hdx.do?docid=EDOC1000023648&amp;lang=zh</a></p><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-2"><p>。。。</p><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-3"><p><strong>。。。。。。。。。</strong></p><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+
+
+
+
+
+<h2 id="交换机终端系统命令"><a href="#交换机终端系统命令" class="headerlink" title="交换机终端系统命令"></a>交换机终端系统命令</h2><p><strong>1.基本查询命令（在用户视图下使用）</strong><br> <strong>pwd</strong>    查看当前目录<br> <strong>dir</strong>    显示当前目录下的文件信息<br> <strong>more</strong> 查看文本文件的具体内容</p>
+<p><strong>2.基本目录操作命令（在用户视图下使用）</strong><br> <strong>cd</strong>    切换目录<br> <strong>mkdir</strong>    创建新的目录<br> <strong>rmdir</strong>  删除目录<br> <strong>cd…</strong> 返回上级目录</p>
+<p><strong>3.基本文本操作命令（在用户视图下使用）</strong><br> <strong>copy</strong>    复制文件<br> <strong>move</strong> 移动文件<br> <strong>rename</strong> 重命名文件<br> <strong>delete</strong> 删除文件<br> <strong>undelete</strong> 恢复删除的文件<br> <strong>reset recycle-bin</strong> 清空回收站，彻底删除回收站中的文件<br> <strong>save</strong> 保存配置文件</p>
+<p><strong>4.系统启动文件基本命令（在用户视图下使用）</strong><br> <strong>display startup</strong> 查看系统启动配置参数<br> <strong>reset saved-configuration</strong> 清除下次启动时加载的配置文件<br> <strong>startup saved-configuration</strong> 设置下次启动时加载的配置文件<br> <strong>compare configuration</strong> 比较当前配置文件核下次启动配置文件</p>
+<p><strong>5.存储设备修复命令(当存储设备文件系统异常时使用)</strong><br> <strong>fixdisk flash:</strong><br> <strong>fixdisk sd1:</strong></p>
+<h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;huawei&gt;system-view</span><br><span class="line">[huawei]sysn XXXXX		#交换机重命名</span><br><span class="line">[XXXXX]</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h2><h3 id="显示交换机当前配置"><a href="#显示交换机当前配置" class="headerlink" title="显示交换机当前配置"></a>显示交换机当前配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]display current-configuration     #dis cu</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="显示arp信息"><a href="#显示arp信息" class="headerlink" title="显示arp信息"></a>显示arp信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis arp		#可以在网关上查询终端的ip与mac地址对应</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="显示mac-address"><a href="#显示mac-address" class="headerlink" title="显示mac-address"></a>显示mac-address</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis mac-address		#查看mac地址是从哪些接口过来的</span><br></pre></td></tr></table></figure>
+
+<h3 id="显示端口vlan"><a href="#显示端口vlan" class="headerlink" title="显示端口vlan"></a>显示端口vlan</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis port vlan		#方便查看每个端口设置的vlan和模式</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="显示端口信息"><a href="#显示端口信息" class="headerlink" title="显示端口信息"></a>显示端口信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis interface		#查看所有端口的信息</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="显示端口配置"><a href="#显示端口配置" class="headerlink" title="显示端口配置"></a>显示端口配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis interface brief		#查看端口的流量，使用状态等</span><br></pre></td></tr></table></figure>
+
+<h3 id="显示ip配置"><a href="#显示ip配置" class="headerlink" title="显示ip配置"></a>显示ip配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis ip interface brief		#查看交换机端口的ip地址配置</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="显示vlan"><a href="#显示vlan" class="headerlink" title="显示vlan"></a>显示vlan</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis vlan</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="显示邻居"><a href="#显示邻居" class="headerlink" title="显示邻居"></a>显示邻居</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis lldp nei br		#可以知道该交换机连着哪些别的设备</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="显示路由表"><a href="#显示路由表" class="headerlink" title="显示路由表"></a>显示路由表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis ip routing-table</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="显示版本信息"><a href="#显示版本信息" class="headerlink" title="显示版本信息"></a>显示版本信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis version</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="显示irf拓扑情况"><a href="#显示irf拓扑情况" class="headerlink" title="显示irf拓扑情况"></a>显示irf拓扑情况</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[huawei]dis irf top</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h2 id="Vlan、接口、接口类型和聚合组"><a href="#Vlan、接口、接口类型和聚合组" class="headerlink" title="Vlan、接口、接口类型和聚合组"></a>Vlan、接口、接口类型和聚合组</h2><p>Vlan相当于虚拟接口，是一个抽象的局域网，不同Vlan之间都是独立的。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="/images/%E5%8D%8E%E4%B8%BA-%E5%8D%8E%E4%B8%89%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%91%BD%E4%BB%A4/clip_image002.jpg" alt="img"></p>
+<h3 id="Vlan的创建"><a href="#Vlan的创建" class="headerlink" title="Vlan的创建"></a>Vlan的创建</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vlan 100		#创建vlan 100  </span><br><span class="line">vlan batch 10 20 30  #批量创建 vlan 10 20 30</span><br><span class="line">vlan batch 1 to 3    #批量创建vlan 1、2、3</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>交换机接口一般是eth百兆接口和Gth千兆接口，还有万兆的TENG口。</p>
+<p>想要进入这些接口直接在对应接口名称前面加入interface就行了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">interface Ethernet0&#x2F;0&#x2F;1		#进入端口Ethernet0&#x2F;0&#x2F;1</span><br><span class="line">interface GigabitEthernet0&#x2F;0&#x2F;1		#进入端口GigabitEthernet0&#x2F;0&#x2F;1</span><br><span class="line">interface TENG0&#x2F;0&#x2F;1		#进入端口TENG0&#x2F;0&#x2F;1</span><br><span class="line">dis this		#显示当前端口信息</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="接口类型"><a href="#接口类型" class="headerlink" title="接口类型"></a>接口类型</h3><p><strong>Access、Trunk、Hybrid</strong></p>
+<h4 id="Access"><a href="#Access" class="headerlink" title="Access"></a>Access</h4><p>Access常用于接入交换机与用户终端之间接口的配置，可默认通过某个vlan，在[Huawei]模式下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">port link-type access		#设置端口类型为access</span><br><span class="line">port default vlan 2			#设置端口默认通过vlan2</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="Trunk"><a href="#Trunk" class="headerlink" title="Trunk"></a>Trunk</h4><p>Trunk常用于交换机之间连接配置，可配置多个vlan通过，在[Huawei]模式下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">port link-type trunk		#设置端口类型为trunk</span><br><span class="line">undo port trunk allow-pass vlan 1		#设置端口不允许vlan1通过</span><br><span class="line">port trunk allow-pass vlan 2 to 4094	#设置端口允许vlan2-4094通过</span><br></pre></td></tr></table></figure>
+
+<h4 id="Hybrid"><a href="#Hybrid" class="headerlink" title="Hybrid"></a>Hybrid</h4><p>Hybrid是华为华三交换机专门的一个类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">port link-type hybrid		#设置端口类型为hyprid</span><br><span class="line">port hybrid untagged vlan 3980 4000 to 4001		#华为写法</span><br><span class="line">port hybrid vlan 3980 4000 to 4001 untagged 	#huawei写法</span><br><span class="line">###tagged就是直接通过，不去掉tag，untagged就是去掉tag。</span><br><span class="line"></span><br><span class="line">hybrid在端口为tag和untag两种不同情况 hybrid端口配置了： </span><br><span class="line">port hybrid tagged vlan 2 4 </span><br><span class="line">port hybrid untagged vlan 3 5</span><br><span class="line">一、当交换机接收到一个来自其他设备的以太网帧时，首先查看该帧是否带了标签（即VLAN信息）</span><br><span class="line">1. 如果不带标签（如来自PC，或者其他设备发送时剥离了标签）那么允许该标签进入交换机，同时打上该端口的PVID的</span><br><span class="line">VLAN号。该帧从不带标签到带标签。</span><br><span class="line">2. 如果带标签，那么首先查看该帧所带VLAN号是否在我上边两行命令行里出现了，比如3就出现了，6没有出现；那么对</span><br><span class="line">于带3的帧，会让该帧通过，不会对帧做任何更改。而对于带6的帧，就不会让它通过而直接丢弃。</span><br><span class="line">二、当交换机要发送一个以太帧出去时，（不会检查是否带标签，因为所有帧都是从CPU过来的，肯定带了标签）对于</span><br><span class="line">tagged定义的帧，端口会直接发送，不会做任何更改，例如帧4。而对于untagged定义的帧，会剥离掉该帧的标签，该帧从带</span><br><span class="line">标签到不带标签，如帧5 。</span><br><span class="line">总结一句，对于tagged和untagged定义的帧，只有在发送时才会有剥离或不剥离的区别，而对于接收到帧的时候，只会起一</span><br><span class="line">个判断是否允许该帧通过的作用（定义了则允许通过，未定义则丢弃）</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Eth-trunk聚合组"><a href="#Eth-trunk聚合组" class="headerlink" title="Eth-trunk聚合组"></a>Eth-trunk聚合组</h3><p>Eth-trunk聚合口是华为华三的端口聚合，可以吧两个端口作为聚合组来使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">interface Eth-Trunk1		#创建聚合组Eth-Trunk1</span><br><span class="line">port link-type trunk		#设置端口类型为trunk</span><br><span class="line">undo port trunk allow-pass vlan 1		#设置端口不允许vlan1通过</span><br><span class="line">port trunk allow-pass vlan 2 to 4094	#设置端口允许vlan2-4094通过</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><h3 id="静态路由"><a href="#静态路由" class="headerlink" title="静态路由"></a>静态路由</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">静态路由意思挺简单，就是自己加路由，目的地址+掩码，下一跳的地址，比如：</span><br><span class="line">ip route-static 0.0.0.0 0.0.0.0 10.1.1.254 	#这个意思就是，不管去哪里，下一跳地址都是10.1.1.254</span><br><span class="line">ip route-static 10.10.100.0 255.255.255.0 10.10.101.1	#这条的意思就是到10.10.100.0&#x2F;24这个段的访问的下</span><br><span class="line">一跳地址是10.10.101.1</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h3><h4 id="RIP"><a href="#RIP" class="headerlink" title="RIP"></a>RIP</h4><p>RIP是一种动态路由协议，使用跳数作为度量标准，是距离矢量路由协议，是一种谣传式的路由协议。</p>
+<p>​        <strong>RIP路由协议</strong>的处理是通过UDP  520端口来操作的。所有的RIP消息都被封装在UDP用户数据报协议中，源和目的的端口字段的值被设置为520。RIP定义了两种消息类型：请求消息（Request message）和响应消息（response  message）。请求消息用来向邻居路由器发送一个更新（update），响应消息用来传送路由更新。RIP的度量是基于“跳”数（hop  count）的，1跳表示是预发出通告的路由器直连接网络，16跳表示不可达的网络。<br>　　RIP从每一个启用RIP的接口广播出带有请求消息的数据包，接着，RIP程序进入一个循环状态，不断地侦听来自其他路由器的RIP请求响应消息，而接收请求的邻居路由器则回送包含它们的路由表的响应消息。<br>　　RIP的路由防环机制有：<br>　　1）最大跳数：当一条路由达到16跳时，该路由失效，RIP最大为16跳，也就是说最多可以经过16台设备，限制了网络的大小。<br>　　2）水平分割：单向宣告网络，从一个接口收到的路由不会再从该接口宣告出去。<br>　　3）毒性逆转：优化水平分割，从一个接口收到的路由会在从该接口宣告出去，但是该路由的跳数会自动设为16跳不可达。<br>　　4）保持计时器：收到的不可达路由信息被抑制的时间，默认180s内路由器不会接受和发送抑制路由的更新信息，若180 s后没有更优化的路由，该抑制路由将被删除。<br>　　<strong>RIP协议的特点</strong><br>　　1）RIP属于内部网关协议(IGP)，是Distance-Vector协议。<br>　　2）RIP是基于UDP的，源目的端口号为520。<br>　　3）周期性以广(组)播向邻居发送更新。<br>　　4）做完整更新，将整个路由表的信息传递给邻居。<br>　　5）Metric（度量值）只跟跳数有关。<br>　　6）只支持等价的负载均衡</p>
+<h4 id="OSPF"><a href="#OSPF" class="headerlink" title="OSPF"></a>OSPF</h4><h2 id="VRRP虚拟网关"><a href="#VRRP虚拟网关" class="headerlink" title="VRRP虚拟网关"></a>VRRP虚拟网关</h2><p>VRRP感觉跟堆叠挺像的，区别在一个是交换机一个是路由器。两个路由器一个主一个辅，然后就像两个班主任带领各自的班级，1班和二班，但是比如有一天1班老师请假了，那么1班的学生可以找2班班主任请假什么的，这么个形容。</p>
+<h2 id="堆叠（stack）"><a href="#堆叠（stack）" class="headerlink" title="堆叠（stack）"></a>堆叠（stack）</h2><p> 简单来说，交换机设置虚拟stack端口，然后把堆叠的物理端口与这个虚拟的端口绑定， 然后主设备设置一下优先级，备的和从的设置一下堆叠ID（因为默认是0，基本都是给主的用），然后保存配置，连线，重启，检查堆叠是否成功。</p>
+<h2 id="账号登录"><a href="#账号登录" class="headerlink" title="账号登录"></a>账号登录</h2><p>账号的创建及远程登录有这么几个大致步骤：</p>
+<ul>
+<li>本地用户的创建</li>
+<li>vty远程线路的创建</li>
+<li>用户在vty的权限</li>
+<li>用户可以用哪些方式登录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">user-interface vty 0 4	#进入用户界面视图</span><br><span class="line">authentcation-mode password		#设置认证方式为密码验证方式</span><br><span class="line">set authentication password simple huawei	#设置登录验证的密码为明文密码“huawei”</span><br><span class="line">user privilege level 3	#设置用户级别为3</span><br></pre></td></tr></table></figure>
+
+<p> AAA认证（Authentication认证、Authorization授权和Accounting计费）</p>
+<h2 id="定义acl策略"><a href="#定义acl策略" class="headerlink" title="定义acl策略"></a>定义acl策略</h2><p>acl是交换机的一个安全策略，可以自己设定规则，在规则组内的某些条件能做什么。</p>
+<h3 id="定义acl"><a href="#定义acl" class="headerlink" title="定义acl"></a>定义acl</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">acl number XXXX（3000以上）进入以后</span><br><span class="line">rule permit&#x2F;deny IP&#x2F;TCP&#x2F;UDP等 sourceXXX.XXX.XXX.XXX XXX.XXX.XXX.XXX（反掩码）</span><br><span class="line">destination XXX.XXX.XXX.XXX XXX.XXX.XXX.XXX（反掩码）eq</span><br><span class="line">注意：华为默认没有deny any any</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="防火墙上端口加载ACL"><a href="#防火墙上端口加载ACL" class="headerlink" title="防火墙上端口加载ACL"></a>防火墙上端口加载ACL</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall packet-filter 3000 inbound</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="无线设置"><a href="#无线设置" class="headerlink" title="无线设置"></a>无线设置</h2></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">不言仙声</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://prjoker.github.io/2020/05/11/huawei/">http://prjoker.github.io/2020/05/11/huawei/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://prjoker.github.io" target="_blank">Prjoker</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%91%BD%E4%BB%A4/">交换机命令</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post01.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/05/11/huasan/"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post04.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">华三交换机命令</div></div></a></div><div class="next-post pull-right"><a href="/2020/05/09/school_wifi/"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post04.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">校园无线项目</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/05/11/cisco/" title="思科交换机命令"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post02.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-11</div><div class="title">思科交换机命令</div></div></a></div><div><a href="/2020/05/11/huasan/" title="华三交换机命令"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post04.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-11</div><div class="title">华三交换机命令</div></div></a></div><div><a href="/2020/09/18/ruijie/" title="锐捷命令"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post03.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-18</div><div class="title">锐捷命令</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 不言仙声</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://jokeroy.top">blog</a>!</div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const initData = {
+      el: '#vcomment',
+      appId: 'iOkEYivfLCrwbD109lREyr13-MdYXbMMI',
+      appKey: 'bYATsf9LKQOxrxCs4Fq2yeWO',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.17.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+    content = content.replace(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png|webp)/g, '') // remove image link
+    content = content.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi, '') // remove url
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon 
+    let defaultIcon = '?d=monsterid'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    for (let i = 0; i < array.length; i++) {
+      result += '<div class=\'aside-list-item\'>'
+
+      if (true) {
+        result += `<a href='${array[i].url}' class="thumbnail"><img src='${getIcon(array[i].avatar, array[i].mail)}' alt='${array[i].nick}'></a>`
+      }
+
+      result += `<div class='content'>
+      <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+      <div class='name'><span>${array[i].nick}</span><time> / ${btf.diffDate(array[i].date, true)}</time></div>
+      </div></div>`
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getValineData = () => {
+      let serverURL = ''
+      if (false) {
+        serverURL = ''
+      } else {
+        serverURL = 'https://iOkEYivf.api.lncldglobal.com'
+      }
+
+    var settings = {
+      "url": `${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,
+      "method": "GET",
+      "timeout": 0,
+      "headers": {
+        "X-LC-Id": 'iOkEYivfLCrwbD109lREyr13-MdYXbMMI',
+        "X-LC-Key": 'bYATsf9LKQOxrxCs4Fq2yeWO',
+        "Content-Type": "application/json"
+      },
+    }
+
+    $.ajax(settings).done((response) => {
+      var valineArray = []
+      response.results.forEach((e)=>{
+        valineArray.push({
+          'avatar': e.QQAvatar,
+          'content': changeContent(e.comment),
+          'mail': e.mail,
+          'nick': e.nick,
+          'url': e.url,
+          'date': e.createdAt,
+        })
+      })
+      
+      saveToLocal.set('leancloud-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+      generateHtml(valineArray)
+
+    }).fail(()=>{
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.innerHTML= "无法获取资料，请确认相关配置是否正确"
+    })
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('leancloud-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getValineData()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="2077331460" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  'meta[name=description]',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: true,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '180487064-1', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (true) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>
