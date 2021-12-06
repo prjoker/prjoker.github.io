@@ -1,0 +1,360 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>打印机共享 | Prjoker</title><meta name="keywords" content="桌面运维"><meta name="author" content="不言仙声"><meta name="copyright" content="不言仙声"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="关于打印机连接的各种问题 经常碰到老师需要安装打印机，那么打印机到底怎么连接呢？一般来说分为网络打印机和本地打印机两种方式。 网络打印机 ​        有的打印机支持连接网线，并且可以设置IP地址，像我见的比较多的联想的M7675DXF这样的。首先要把该接的线接好，网线、电源线等。然后你要保证你的打印机连接的网络跟你的需要打印的终端设备在同一个局域网，然后给你的打印机设置同网段的IP地址、子网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="打印机共享">
+<meta property="og:url" content="https://jokeroy.top/2020/05/08/%E6%89%93%E5%8D%B0%E6%9C%BA%E5%85%B1%E4%BA%AB/index.html">
+<meta property="og:site_name" content="Prjoker">
+<meta property="og:description" content="关于打印机连接的各种问题 经常碰到老师需要安装打印机，那么打印机到底怎么连接呢？一般来说分为网络打印机和本地打印机两种方式。 网络打印机 ​        有的打印机支持连接网线，并且可以设置IP地址，像我见的比较多的联想的M7675DXF这样的。首先要把该接的线接好，网线、电源线等。然后你要保证你的打印机连接的网络跟你的需要打印的终端设备在同一个局域网，然后给你的打印机设置同网段的IP地址、子网">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post04.jpg">
+<meta property="article:published_time" content="2020-05-08T07:34:14.000Z">
+<meta property="article:modified_time" content="2020-11-26T07:51:43.914Z">
+<meta property="article:author" content="不言仙声">
+<meta property="article:tag" content="桌面运维">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post04.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://jokeroy.top/2020/05/08/%E6%89%93%E5%8D%B0%E6%9C%BA%E5%85%B1%E4%BA%AB/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2020-11-26 15:51:43'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><meta name="generator" content="Hexo 5.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">24</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fa fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fa fa-image"></i><span> 图库</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-image"></i><span> 书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/box/"><i class="fa-fw fa fa-internet-explorer"></i><span> 万物互联</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post04.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Prjoker</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fa fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw fa fa-image"></i><span> 图库</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-image"></i><span> 书籍</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/box/"><i class="fa-fw fa fa-internet-explorer"></i><span> 万物互联</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-comment-dots"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">打印机共享</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-05-08T07:34:14.000Z" title="发表于 2020-05-08 15:34:14">2020-05-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-26T07:51:43.914Z" title="更新于 2020-11-26 15:51:43">2020-11-26</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><p>关于打印机连接的各种问题</p>
+<p>经常碰到老师需要安装打印机，那么打印机到底怎么连接呢？一般来说分为网络打印机和本地打印机两种方式。</p>
+<p>网络打印机</p>
+<p>​        有的打印机支持连接网线，并且可以设置IP地址，像我见的比较多的联想的M7675DXF这样的。首先要把该接的线接好，网线、电源线等。然后你要保证你的打印机连接的网络跟你的需要打印的终端设备在同一个局域网，然后给你的打印机设置同网段的IP地址、子网掩码和网关。终端上首先Ping一下打印机的IP看能不能PING通，可以的话就控制面板，打印机，选择添加打印机，然后选择网络连接、通过IP地址访问，输入打印机的IP地址其余默认，系统会自动帮你连接上打印机。</p>
+<p>共享打印机</p>
+<p>打印机可以直连电脑进行连接，现在大部分是USB方口数据线进行连接，USB接电脑方口接打印机。</p>
+<p>去京东上面直接搜打印机数据线，直接有的。</p>
+<p>​        打印机开机，然后连接上数据线，一般来说电脑会自动识别到新的端口并且下载相应的驱动，当然也有识别不到自动下载驱动失败的情况，那么你就可以自己去网上啊官网什么的下载相应的驱动安装，然后自己在控制面板打印机里添加新的打印机。不过你下载好驱动之后，USB拔插一下应该可以成功的自动安装打印机，这样可以避免自己添加打印机的时候本地端口选择错误。因为我有遇到过我添加的时候选择的是常见的LTP1端口，但其实是USB虚拟连接端口。</p>
+<p>​        直连结束后，你可以右键打印机，打印机属性，选择共享标签页，打钩共享，这样你的打印机就可以共享出去，跟你在同个局域网的人也能通过你的电脑打印啦，当然你要注意的是如果你电脑关机了，别人就不能打印咯。</p>
+<p>报错</p>
+<p>我遇到大部分报错都是用重启Print Snoor那个服务来解决。win+R，输入services.msc，找到服务重启下，再不行把Server服务也重启一下，基本上解决了我很多的问题。当然也有很多问题涉及到Guest用户没有启用、组策略等等，等下次遇到了可以好好记一下。</p>
+<p>惠普 5200L打印机驱动安装方法（USB安装）</p>
+<p><a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/1796356079281328707.html">https://zhidao.baidu.com/question/1796356079281328707.html</a></p>
+<p> [Flash Repair.lnk](........\Desktop\Flash Repair.lnk) </p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">不言仙声</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jokeroy.top/2020/05/08/%E6%89%93%E5%8D%B0%E6%9C%BA%E5%85%B1%E4%BA%AB/">https://jokeroy.top/2020/05/08/%E6%89%93%E5%8D%B0%E6%9C%BA%E5%85%B1%E4%BA%AB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jokeroy.top" target="_blank">Prjoker</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%A1%8C%E9%9D%A2%E8%BF%90%E7%BB%B4/">桌面运维</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post04.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/05/09/school_wifi/"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post01.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">校园无线项目</div></div></a></div><div class="next-post pull-right"><a href="/2020/05/06/%E5%85%B3%E4%BA%8E2020%E5%B9%B4%E7%9A%84%E7%96%AB%E6%83%85%E7%9A%84%E6%80%9D%E8%80%83/"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/prjoker/CDN@main/cover/post02.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">关于2020年的疫情的思考</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By 不言仙声</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://jokeroy.top">blog</a>!</div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const initData = {
+      el: '#vcomment',
+      appId: 'iOkEYivfLCrwbD109lREyr13-MdYXbMMI',
+      appKey: 'bYATsf9LKQOxrxCs4Fq2yeWO',
+      placeholder: 'Please leave your footprints',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: false,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.17.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+    content = content.replace(/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png|webp)/g, '') // remove image link
+    content = content.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi, '') // remove url
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon 
+    let defaultIcon = '?d=monsterid'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    for (let i = 0; i < array.length; i++) {
+      result += '<div class=\'aside-list-item\'>'
+
+      if (true) {
+        result += `<a href='${array[i].url}' class="thumbnail"><img src='${getIcon(array[i].avatar, array[i].mail)}' alt='${array[i].nick}'></a>`
+      }
+
+      result += `<div class='content'>
+      <a class='comment' href='${array[i].url}'>${array[i].content}</a>
+      <div class='name'><span>${array[i].nick}</span><time> / ${btf.diffDate(array[i].date, true)}</time></div>
+      </div></div>`
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getValineData = () => {
+      let serverURL = ''
+      if (false) {
+        serverURL = ''
+      } else {
+        serverURL = 'https://iOkEYivf.api.lncldglobal.com'
+      }
+
+    var settings = {
+      "url": `${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,
+      "method": "GET",
+      "timeout": 0,
+      "headers": {
+        "X-LC-Id": 'iOkEYivfLCrwbD109lREyr13-MdYXbMMI',
+        "X-LC-Key": 'bYATsf9LKQOxrxCs4Fq2yeWO',
+        "Content-Type": "application/json"
+      },
+    }
+
+    $.ajax(settings).done((response) => {
+      var valineArray = []
+      response.results.forEach((e)=>{
+        valineArray.push({
+          'avatar': e.QQAvatar,
+          'content': changeContent(e.comment),
+          'mail': e.mail,
+          'nick': e.nick,
+          'url': e.url,
+          'date': e.createdAt,
+        })
+      })
+      
+      saveToLocal.set('leancloud-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+      generateHtml(valineArray)
+
+    }).fail(()=>{
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.innerHTML= "无法获取资料，请确认相关配置是否正确"
+    })
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('leancloud-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getValineData()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="2077331460" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  'meta[name=description]',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>
